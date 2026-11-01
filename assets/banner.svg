@@ -1,173 +1,161 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="50%" stop-color="#161b22" />
-      <stop offset="100%" stop-color="#0a0d12" />
+    <!-- Background Gradient (Deep Obsidian) -->
+    <linearGradient id="appleBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c11" />
+      <stop offset="50%" stop-color="#0f151e" />
+      <stop offset="100%" stop-color="#0b1017" />
     </linearGradient>
 
-    <!-- Glow & Accent Gradients -->
-    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" />
-      <stop offset="50%" stop-color="#bb9af7" />
-      <stop offset="100%" stop-color="#7dcfff" />
+    <!-- Glass Top Edge Highlight -->
+    <linearGradient id="appleGlassEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2997ff" stop-opacity="0" />
+      <stop offset="30%" stop-color="#2997ff" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#bf5af2" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#bf5af2" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="subtleLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0" />
-      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0" />
-    </linearGradient>
-
-    <radialGradient id="radialCyan" cx="85%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#7dcfff" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#7dcfff" stop-opacity="0" />
+    <!-- Subtle Ambient Radial Lights -->
+    <radialGradient id="radialBlue" cx="40%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#2997ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#2997ff" stop-opacity="0" />
     </radialGradient>
 
-    <radialGradient id="radialPurple" cx="15%" cy="70%" r="60%">
-      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0" />
+    <radialGradient id="radialPurple" cx="80%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#bf5af2" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#bf5af2" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#30363d" stroke-width="0.7" stroke-opacity="0.45" />
-      <circle cx="40" cy="40" r="1" fill="#7aa2f7" fill-opacity="0.3" />
+    <!-- Dot Matrix Pattern -->
+    <pattern id="dotGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="0.8" fill="#30363d" fill-opacity="0.5" />
     </pattern>
-
-    <!-- Drop Shadows -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <style>
     .name-title {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 54px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", sans-serif;
+      font-size: 52px;
       font-weight: 800;
-      letter-spacing: 6px;
+      letter-spacing: -0.025em;
       fill: #f0f6fc;
     }
     .role-text {
-      font-family: "SF Mono", "Fira Code", "Roboto Mono", Menlo, monospace;
-      font-size: 19px;
-      font-weight: 500;
-      letter-spacing: 2.5px;
-      fill: #7aa2f7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Mono", "Fira Code", monospace;
+      font-size: 16.5px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      fill: #2997ff;
     }
     .desc-text {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+      font-size: 14.5px;
       font-weight: 400;
       fill: #8b949e;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.2px;
     }
     .badge-pill {
-      font-family: "SF Mono", "Fira Code", monospace;
-      font-size: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Mono", "Fira Code", monospace;
+      font-size: 11.5px;
       font-weight: 600;
-      fill: #c9d1d9;
+      fill: #e6edf3;
+      letter-spacing: 0.3px;
     }
     .status-text {
-      font-family: "SF Mono", "Fira Code", monospace;
-      font-size: 12px;
-      fill: #7ee787;
-      letter-spacing: 1px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Mono", monospace;
+      font-size: 11.5px;
+      font-weight: 600;
+      fill: #30d158;
+      letter-spacing: 1.2px;
     }
   </style>
 
   <!-- Card Background -->
-  <rect width="1200" height="280" rx="16" fill="url(#bgGradient)" stroke="#30363d" stroke-width="1.5" />
+  <rect width="1200" height="280" rx="16" fill="url(#appleBgGradient)" stroke="#30363d" stroke-width="1.2" />
 
   <!-- Ambient Light Overlays -->
-  <rect width="1200" height="280" rx="16" fill="url(#radialCyan)" />
+  <rect width="1200" height="280" rx="16" fill="url(#radialBlue)" />
   <rect width="1200" height="280" rx="16" fill="url(#radialPurple)" />
 
-  <!-- Grid Pattern Overlay -->
-  <rect width="1200" height="280" rx="16" fill="url(#grid)" />
+  <!-- Dot Grid Pattern -->
+  <rect width="1200" height="280" rx="16" fill="url(#dotGrid)" />
 
-  <!-- Accent Border Top Bar -->
-  <path d="M 16 0 L 1184 0" stroke="url(#primaryGlow)" stroke-width="3" />
+  <!-- Accent Top Edge -->
+  <path d="M 16 1 L 1184 1" stroke="url(#appleGlassEdge)" stroke-width="2" />
 
   <!-- Content Layout -->
-  <g transform="translate(70, 0)">
+  <g transform="translate(68, 0)">
     <!-- Terminal / Status Indicator -->
-    <g transform="translate(0, 48)">
-      <circle cx="6" cy="6" r="4.5" fill="#238636" />
-      <circle cx="6" cy="6" r="8" fill="#2ea043" fill-opacity="0.3">
-        <animate attributeName="r" values="6;10;6" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="fill-opacity" values="0.4;0.05;0.4" dur="3s" repeatCount="indefinite" />
+    <g transform="translate(0, 44)">
+      <circle cx="6" cy="6" r="4.5" fill="#30d158" />
+      <circle cx="6" cy="6" r="8" fill="#30d158" fill-opacity="0.25">
+        <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="fill-opacity" values="0.3;0.05;0.3" dur="3s" repeatCount="indefinite" />
       </circle>
-      <text x="24" y="10" class="status-text">SYSTEM ACTIVE // BUILDING THE FUTURE</text>
+      <text x="24" y="10" class="status-text">SYSTEM ACTIVE // CRAFTING RESILIENT ARCHITECTURES</text>
     </g>
 
     <!-- Main Title -->
-    <g transform="translate(0, 115)">
+    <g transform="translate(0, 110)">
       <text x="0" y="0" class="name-title">PARSA EBRAHIMI</text>
     </g>
 
     <!-- Subtitle / Role -->
-    <g transform="translate(0, 155)">
+    <g transform="translate(0, 148)">
       <text x="0" y="0" class="role-text">&gt; ROBOTICS, SYSTEMS &amp; FULL-STACK ENGINEER</text>
     </g>
 
     <!-- Description / Core focus -->
-    <g transform="translate(0, 192)">
-      <text x="0" y="0" class="desc-text">Cable-driven robotics & AI · Zero-dependency SDKs · Scalable enterprise web architectures</text>
+    <g transform="translate(0, 184)">
+      <text x="0" y="0" class="desc-text">Cable-driven robotics &amp; AI · Zero-dependency SDKs · Scalable enterprise web architectures</text>
     </g>
 
-    <!-- Tech Pills -->
-    <g transform="translate(0, 222)">
-      <!-- Pill 1: Rust -->
+    <!-- Apple-Style Translucent Tech Pills -->
+    <g transform="translate(0, 216)">
+      <!-- Pill 1: Robotics & Kinematics -->
       <g transform="translate(0, 0)">
-        <rect width="78" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="39" y="17" text-anchor="middle" class="badge-pill">🦀 RUST</text>
+        <rect width="186" height="28" rx="7" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="93" y="18" text-anchor="middle" class="badge-pill">🤖 ROBOTICS &amp; KINEMATICS</text>
       </g>
-      <!-- Pill 2: TypeScript -->
-      <g transform="translate(88, 0)">
-        <rect width="124" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="62" y="17" text-anchor="middle" class="badge-pill">⚡ TYPESCRIPT</text>
+      <!-- Pill 2: Telemetry SDKs -->
+      <g transform="translate(196, 0)">
+        <rect width="154" height="28" rx="7" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="77" y="18" text-anchor="middle" class="badge-pill">⚡ TELEMETRY SDKs</text>
       </g>
-      <!-- Pill 3: Python -->
-      <g transform="translate(222, 0)">
-        <rect width="94" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="47" y="17" text-anchor="middle" class="badge-pill">🐍 PYTHON</text>
+      <!-- Pill 3: Full-Stack Systems -->
+      <g transform="translate(360, 0)">
+        <rect width="176" height="28" rx="7" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="88" y="18" text-anchor="middle" class="badge-pill">▲ FULL-STACK SYSTEMS</text>
       </g>
-      <!-- Pill 4: Next.js -->
-      <g transform="translate(326, 0)">
-        <rect width="102" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="51" y="17" text-anchor="middle" class="badge-pill">▲ NEXT.JS</text>
+      <!-- Pill 4: Python & Rust -->
+      <g transform="translate(546, 0)">
+        <rect width="144" height="28" rx="7" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="72" y="18" text-anchor="middle" class="badge-pill">🐍 PYTHON &amp; RUST</text>
       </g>
-      <!-- Pill 5: Engines & SDKs -->
-      <g transform="translate(438, 0)">
-        <rect width="180" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="90" y="17" text-anchor="middle" class="badge-pill">🤖 ROBOTICS &amp; SDKs</text>
+      <!-- Pill 5: WebGPU Twins -->
+      <g transform="translate(700, 0)">
+        <rect width="140" height="28" rx="7" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="70" y="18" text-anchor="middle" class="badge-pill">🌐 WEBGPU TWINS</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Decorative Geometric Element -->
-  <g transform="translate(980, 50)" opacity="0.6">
-    <!-- Concentric geometric rings -->
-    <circle cx="80" cy="80" r="70" fill="none" stroke="#7aa2f7" stroke-width="1" stroke-dasharray="6 6" />
-    <circle cx="80" cy="80" r="48" fill="none" stroke="#bb9af7" stroke-width="1.2" />
-    <circle cx="80" cy="80" r="24" fill="none" stroke="#7dcfff" stroke-width="1.5" stroke-dasharray="3 3" />
-    <circle cx="80" cy="80" r="5" fill="#7aa2f7" />
+  <!-- Right Decorative Element: Precision Apple-Style Concentric Rings -->
+  <g transform="translate(980, 50)" opacity="0.75">
+    <circle cx="80" cy="80" r="76" fill="none" stroke="#2997ff" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4 4" />
+    <circle cx="80" cy="80" r="54" fill="none" stroke="#bf5af2" stroke-width="1.2" stroke-opacity="0.6" />
+    <circle cx="80" cy="80" r="28" fill="none" stroke="#30d158" stroke-width="1.4" stroke-opacity="0.7" stroke-dasharray="2 2" />
+    <circle cx="80" cy="80" r="5" fill="#2997ff" />
     
     <!-- Coordinate crosshairs -->
     <line x1="80" y1="0" x2="80" y2="160" stroke="#30363d" stroke-width="0.8" />
     <line x1="0" y1="80" x2="160" y2="80" stroke="#30363d" stroke-width="0.8" />
 
-    <!-- Corner brackets -->
-    <path d="M 0 20 L 0 0 L 20 0" fill="none" stroke="#7aa2f7" stroke-width="1.8" />
-    <path d="M 140 0 L 160 0 L 160 20" fill="none" stroke="#7aa2f7" stroke-width="1.8" />
-    <path d="M 0 140 L 0 160 L 20 160" fill="none" stroke="#7aa2f7" stroke-width="1.8" />
-    <path d="M 140 160 L 160 160 L 160 140" fill="none" stroke="#7aa2f7" stroke-width="1.8" />
+    <!-- Corner Brackets -->
+    <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#2997ff" stroke-width="1.5" stroke-opacity="0.6" />
+    <path d="M 144 0 L 160 0 L 160 16" fill="none" stroke="#2997ff" stroke-width="1.5" stroke-opacity="0.6" />
+    <path d="M 0 144 L 0 160 L 16 160" fill="none" stroke="#2997ff" stroke-width="1.5" stroke-opacity="0.6" />
+    <path d="M 144 160 L 160 160 L 160 144" fill="none" stroke="#2997ff" stroke-width="1.5" stroke-opacity="0.6" />
   </g>
-
-  <!-- Bottom Accent Separator -->
-  <line x1="100" y1="279" x2="1100" y2="279" stroke="url(#subtleLine)" stroke-width="1" />
 </svg>

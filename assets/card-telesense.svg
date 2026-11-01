@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="teleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1017" />
+      <stop offset="100%" stop-color="#141a24" />
+    </linearGradient>
+
+    <!-- Glass Top Edge Highlight -->
+    <linearGradient id="teleGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30d158" />
+      <stop offset="50%" stop-color="#2997ff" />
+      <stop offset="100%" stop-color="#bf5af2" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sf-mono {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Mono", "Fira Code", monospace;
+    }
+    .sf-pro {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      fill: #f0f6fc;
+      letter-spacing: -0.01em;
+    }
+    .status-pill {
+      font-size: 10px;
+      font-weight: 600;
+      fill: #2997ff;
+      letter-spacing: 0.5px;
+    }
+    .code-tag { fill: #ff7b72; }
+    .code-attr { fill: #79c0ff; }
+    .code-str { fill: #a5d6ff; }
+    .code-fn { fill: #d2a8ff; }
+    .code-text { fill: #c9d1d9; font-size: 11px; }
+  </style>
+
+  <!-- Card Body -->
+  <rect width="600" height="220" rx="14" fill="url(#teleBg)" stroke="#30363d" stroke-width="1" />
+  <path d="M 14 1 L 586 1" stroke="url(#teleGlass)" stroke-width="1.5" />
+
+  <!-- Window Chrome Header -->
+  <g transform="translate(18, 14)">
+    <!-- Traffic lights -->
+    <circle cx="8" cy="8" r="5" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5" />
+    <circle cx="24" cy="8" r="5" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5" />
+    <circle cx="40" cy="8" r="5" fill="#27c93f" stroke="#1aab29" stroke-width="0.5" />
+
+    <!-- Tab indicator -->
+    <g transform="translate(64, -2)">
+      <rect width="130" height="20" rx="5" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
+      <text x="14" y="14" class="sf-mono" font-size="10.5px" fill="#c9d1d9">tele.umd.min.js</text>
+    </g>
+
+    <!-- Bundle Metric Pill -->
+    <g transform="translate(422, -2)">
+      <rect width="142" height="20" rx="10" fill="rgba(48, 209, 88, 0.12)" stroke="rgba(48, 209, 88, 0.35)" stroke-width="0.8" />
+      <circle cx="12" cy="10" r="3" fill="#30d158" />
+      <text x="22" y="14" class="sf-mono" font-size="10px" font-weight="700" fill="#30d158">BUNDLE SIZE &lt; 20 kB</text>
+    </g>
+  </g>
+
+  <!-- Divider -->
+  <line x1="0" y1="44" x2="600" y2="44" stroke="#21262d" stroke-width="1" />
+
+  <!-- Content Section -->
+  <g transform="translate(24, 60)">
+    <!-- Title & Subtitle -->
+    <text x="0" y="16" class="sf-pro card-title">Telesense</text>
+    <text x="0" y="34" class="sf-pro" font-size="12px" fill="#8b949e">Lightweight, Zero-Dependency Behavioural Telemetry SDK</text>
+
+    <!-- Code Block Container -->
+    <g transform="translate(0, 48)">
+      <rect width="320" height="88" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="0.8" />
+      
+      <!-- Code lines -->
+      <text x="14" y="24" class="sf-mono code-text">
+        <tspan class="code-tag">&lt;script</tspan> <tspan class="code-attr">src</tspan>=<tspan class="code-str">"telesense/tele.min.js"</tspan><tspan class="code-tag">&gt;&lt;/script&gt;</tspan>
+      </text>
+      
+      <text x="14" y="46" class="sf-mono code-text">
+        <tspan fill="#ff7b72">const</tspan> tracker = <tspan class="code-fn">tele.init</tspan>({
+      </text>
+
+      <text x="28" y="66" class="sf-mono code-text">
+        endpoint: <tspan class="code-str">"/api/events"</tspan>, flushInterval: <tspan fill="#79c0ff">5000</tspan>
+      </text>
+
+      <text x="14" y="82" class="sf-mono code-text">
+        }); <tspan fill="#8b949e">// auto-captures click &amp; heatmap</tspan>
+      </text>
+    </g>
+
+    <!-- Right Side Architecture Badges -->
+    <g transform="translate(340, 48)">
+      <!-- Badge 1: Zero deps -->
+      <g transform="translate(0, 0)">
+        <rect width="212" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
+        <text x="12" y="14" class="sf-mono" font-size="10px" font-weight="600" fill="#8b949e">RUNTIME DEPENDENCIES</text>
+        <text x="12" y="26" class="sf-pro" font-size="12px" font-weight="700" fill="#f0f6fc">0 Third-Party Dependencies</text>
+      </g>
+
+      <!-- Badge 2: Pipeline -->
+      <g transform="translate(0, 38)">
+        <rect width="212" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
+        <text x="12" y="14" class="sf-mono" font-size="10px" font-weight="600" fill="#8b949e">TRANSPORT ADAPTERS</text>
+        <text x="12" y="26" class="sf-pro" font-size="12px" font-weight="700" fill="#f0f6fc">Beacon API · Fetch · WebSocket</text>
+      </g>
+
+      <!-- Badge 3: Visualization -->
+      <g transform="translate(0, 76)">
+        <rect width="212" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="0.8" />
+        <text x="12" y="14" class="sf-mono" font-size="10px" font-weight="600" fill="#8b949e">HEATMAP REPLAY</text>
+        <text x="12" y="26" class="sf-pro" font-size="12px" font-weight="700" fill="#f0f6fc">Viewport Normalization Engine</text>
+      </g>
+    </g>
+  </g>
+</svg>
