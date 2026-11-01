@@ -111,12 +111,12 @@
 
     <!-- Subtitle / Role -->
     <g transform="translate(0, 155)">
-      <text x="0" y="0" class="role-text">&gt; SYSTEMS, ENGINES &amp; FULL-STACK ENGINEER</text>
+      <text x="0" y="0" class="role-text">&gt; ROBOTICS, SYSTEMS &amp; FULL-STACK ENGINEER</text>
     </g>
 
     <!-- Description / Core focus -->
     <g transform="translate(0, 192)">
-      <text x="0" y="0" class="desc-text">Crafting high-performance Rust game engines · Zero-dependency SDKs · Scalable web ecosystems</text>
+      <text x="0" y="0" class="desc-text">Cable-driven robotics & AI · Zero-dependency SDKs · Scalable enterprise web architectures</text>
     </g>
 
     <!-- Tech Pills -->
@@ -143,8 +143,8 @@
       </g>
       <!-- Pill 5: Engines & SDKs -->
       <g transform="translate(438, 0)">
-        <rect width="168" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
-        <text x="84" y="17" text-anchor="middle" class="badge-pill">⚙️ ENGINES &amp; SDKs</text>
+        <rect width="180" height="26" rx="6" fill="#1f242c" stroke="#38444d" stroke-width="1" />
+        <text x="90" y="17" text-anchor="middle" class="badge-pill">🤖 ROBOTICS &amp; SDKs</text>
       </g>
     </g>
   </g>
