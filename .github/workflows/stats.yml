@@ -1,0 +1,63 @@
+name: Update Profile Stats SVGs
+
+on:
+  schedule:
+    # Runs daily at 01:00 UTC
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/stats.yml
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for PROFILE_STATS_TOKEN
+        id: check-secret
+        run: |
+          if [ -n "${{ secrets.PROFILE_STATS_TOKEN }}" ]; then
+            echo "has_token=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_token=false" >> $GITHUB_OUTPUT
+            echo "PROFILE_STATS_TOKEN is not set yet. Skipping generation until secret is added."
+          fi
+
+      - name: Generate Main Stats Card (Public + Private Repos)
+        if: steps.check-secret.outputs.has_token == 'true'
+        uses: soulteary/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: 'username=${{ github.repository_owner }}&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=f0f6fc&icon_color=2997ff&text_color=8b949e'
+          path: assets/stats.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      - name: Generate Top Languages Card (Public + Private Repos)
+        if: steps.check-secret.outputs.has_token == 'true'
+        uses: soulteary/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: 'username=${{ github.repository_owner }}&layout=compact&hide_border=true&count_private=true&bg_color=0d1117&title_color=f0f6fc&text_color=8b949e'
+          path: assets/top-langs.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      - name: Commit and push generated SVGs
+        if: steps.check-secret.outputs.has_token == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats.svg assets/top-langs.svg
+          if git diff --staged --quiet; then
+            echo "No changes in stats cards."
+          else
+            git commit -m "chore: update private stats SVG cards [skip ci]"
+            git push origin main
+          fi
