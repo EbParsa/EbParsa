@@ -49,15 +49,19 @@ jobs:
           path: assets/top-langs.svg
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
+      - name: Update Streak and Activity Graph SVGs
+        run: |
+          curl -s -m 15 "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&hide_border=true&background=0d1117&ring=2997ff&fire=bf5af2&currStreakNum=f0f6fc&currStreakLabel=f0f6fc&sideNums=f0f6fc&sideLabels=8b949e&dates=8b949e&stroke=30363d" -o assets/streak.svg || true
+          curl -s -m 15 "https://activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=react-dark&hide_border=true&bg_color=0d1117&color=2997ff&line=bf5af2&point=30d158" -o assets/activity-graph.svg || true
+
       - name: Commit and push generated SVGs
-        if: steps.check-secret.outputs.has_token == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg assets/top-langs.svg
+          git add assets/*.svg
           if git diff --staged --quiet; then
-            echo "No changes in stats cards."
+            echo "No changes in SVG cards."
           else
-            git commit -m "chore: update private stats SVG cards [skip ci]"
+            git commit -m "chore: update profile SVG cards [skip ci]"
             git push origin main
           fi
