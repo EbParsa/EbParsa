@@ -22,7 +22,7 @@ if [ -z "$(git config user.name)" ]; then
   git config user.name "Parsa Ebrahimi"
 fi
 if [ -z "$(git config user.email)" ]; then
-  git config user.email "ebparsa1388@gmail.com"
+  git config user.email "ebparsa@outlook.com"
 fi
 
 # 2. Stage and commit files
