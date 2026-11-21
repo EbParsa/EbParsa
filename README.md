@@ -125,7 +125,7 @@ I'm a 17-year-old student and programmer who loves building things from scratch.
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=EbParsa&amp;show_icons=true&amp;hide_border=true&amp;count_private=true&amp;bg_color=0d1117&amp;title_color=f0f6fc&amp;icon_color=2997ff&amp;text_color=8b949e" alt="Parsa's GitHub Stats" />
+        <img src="https://github-readme-stats.vercel.app/api?username=EbParsa&amp;show_icons=true&amp;hide_border=true&amp;count_private=true&amp;bg_color=0d1117&amp;title_color=f0f6fc&amp;icon_color=2997ff&amp;text_color=8b949e" alt="Parsa's GitHub Stats" />
       </td>
       <td>
         <img src="https://streak-stats.demolab.com/?user=EbParsa&amp;hide_border=true&amp;background=0d1117&amp;ring=2997ff&amp;fire=bf5af2&amp;currStreakLabel=f0f6fc&amp;stroke=30363d" alt="GitHub Streak" />
@@ -133,7 +133,7 @@ I'm a 17-year-old student and programmer who loves building things from scratch.
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EbParsa&amp;layout=compact&amp;hide_border=true&amp;bg_color=0d1117&amp;title_color=f0f6fc&amp;text_color=8b949e" alt="Top Languages" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EbParsa&amp;layout=compact&amp;hide_border=true&amp;bg_color=0d1117&amp;title_color=f0f6fc&amp;text_color=8b949e" alt="Top Languages" />
       </td>
     </tr>
     <tr>
