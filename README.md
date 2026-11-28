@@ -8,10 +8,14 @@
   </a>
 
   <p align="center">
+    <a href="https://ebparsa.github.io"><img src="https://img.shields.io/badge/Hub-ebparsa.github.io-2997ff?style=flat-square&amp;logo=githubpages&amp;logoColor=white&amp;labelColor=161b22" alt="Social Hub" /></a>
     <a href="mailto:ebparsa@outlook.com"><img src="https://img.shields.io/badge/Email-ebparsa%40outlook.com-0078d4?style=flat-square&amp;logo=microsoftoutlook&amp;logoColor=white&amp;labelColor=161b22" alt="Email" /></a>
     <a href="https://github.com/EbParsa"><img src="https://img.shields.io/badge/GitHub-EbParsa-181717?style=flat-square&amp;logo=github&amp;logoColor=white&amp;labelColor=161b22" alt="GitHub" /></a>
     <a href="https://linkedin.com/in/ebparsa"><img src="https://img.shields.io/badge/LinkedIn-EbParsa-0a66c2?style=flat-square&amp;logo=linkedin&amp;logoColor=white&amp;labelColor=161b22" alt="LinkedIn" /></a>
-    <a href="https://t.me/EbParsa"><img src="https://img.shields.io/badge/Telegram-EbParsa-24a1de?style=flat-square&amp;logo=telegram&amp;logoColor=white&amp;labelColor=161b22" alt="Telegram" /></a>
+    <a href="https://orcid.org/0009-0007-3053-1979"><img src="https://img.shields.io/badge/ORCID-0009--0007--3053--1979-a6ce39?style=flat-square&amp;logo=orcid&amp;logoColor=white&amp;labelColor=161b22" alt="ORCID" /></a>
+    <a href="https://x.com/EbParsa_"><img src="https://img.shields.io/badge/X-%40EbParsa__-000000?style=flat-square&amp;logo=x&amp;logoColor=white&amp;labelColor=161b22" alt="X" /></a>
+    <a href="https://t.me/EbParsa"><img src="https://img.shields.io/badge/Telegram-%40EbParsa-24a1de?style=flat-square&amp;logo=telegram&amp;logoColor=white&amp;labelColor=161b22" alt="Telegram" /></a>
+    <a href="https://discord.com/users/939453873163231262"><img src="https://img.shields.io/badge/Discord-ebparsa-5865f2?style=flat-square&amp;logo=discord&amp;logoColor=white&amp;labelColor=161b22" alt="Discord" /></a>
   </p>
 </div>
 
